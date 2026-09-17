@@ -56,10 +56,10 @@
 <body class="font-sans antialiased">
 
     <!-- Header -->
-    <header class="w-full absolute top-0 z-50 py-6 px-8 md:px-16 flex justify-between items-center">
+    <header class="w-full absolute top-0 z-50 py-4 md:py-6 px-5 sm:px-8 md:px-16 flex justify-between items-center">
         <!-- Logo -->
         <div class="flex items-center gap-2">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D99F45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#D99F45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
                 <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
                 <path d="M8 2v2"></path>
@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <!-- Nav Links -->
+        <!-- Desktop Nav Links -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-brand-dark/80">
             <a href="#" class="text-brand-dark border-b-2 border-brand-dark pb-1">HOME</a>
             <a href="#" class="hover:text-brand-dark transition">ABOUT</a>
@@ -80,15 +80,48 @@
             <a href="#" class="hover:text-brand-dark transition">CONTACT US</a>
         </nav>
 
-        <!-- CTA -->
-        <a href="#" class="hidden md:flex items-center gap-2 bg-brand-dark text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider hover:bg-brand-dark/90 transition shadow-lg">
-            ALL PRODUCTS
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        </a>
+        <!-- Right Side: CTA Button (Desktop only) & Mobile Menu Toggle -->
+        <div class="flex items-center gap-2 sm:gap-3">
+            <!-- CTA Button (Desktop Only) -->
+            <a href="#" class="hidden md:flex items-center gap-2 bg-brand-dark text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider hover:bg-brand-dark/90 transition shadow-md">
+                <span>ALL PRODUCTS</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full text-brand-dark hover:bg-brand-dark/10 transition" aria-label="Toggle Menu">
+                <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer / Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-brand-cream/95 backdrop-blur-md border-b border-brand-dark/15 shadow-2xl px-6 py-4 flex flex-col gap-3 text-sm font-semibold text-brand-dark z-50">
+            <a href="#" class="py-2 border-b border-brand-dark/10 hover:text-brand-orange transition flex items-center justify-between">
+                <span>HOME</span>
+                <span class="text-xs text-brand-dark/40">›</span>
+            </a>
+            <a href="#" class="py-2 border-b border-brand-dark/10 hover:text-brand-orange transition flex items-center justify-between">
+                <span>ABOUT</span>
+                <span class="text-xs text-brand-dark/40">›</span>
+            </a>
+            <a href="#" class="py-2 border-b border-brand-dark/10 hover:text-brand-orange transition flex items-center justify-between">
+                <span>PRODUCT</span>
+                <span class="text-xs text-brand-dark/40">›</span>
+            </a>
+            <a href="#" class="py-2 hover:text-brand-orange transition flex items-center justify-between">
+                <span>CONTACT US</span>
+                <span class="text-xs text-brand-dark/40">›</span>
+            </a>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[90vh] lg:min-h-screen pt-28 md:pt-32 pb-12 md:pb-16 px-6 sm:px-8 md:px-16 overflow-hidden flex flex-col md:flex-row items-center justify-between">
+    <section class="relative min-h-[90vh] lg:min-h-screen pt-24 sm:pt-28 md:pt-32 pb-10 md:pb-16 px-5 sm:px-8 md:px-16 overflow-hidden flex flex-col md:flex-row items-center justify-between">
         <!-- Ambient Botanical Leaf Shadow (Top Right) -->
         <div class="absolute top-0 right-0 w-80 md:w-[520px] h-80 md:h-[520px] opacity-15 pointer-events-none overflow-hidden select-none z-0">
             <svg viewBox="0 0 400 400" fill="currentColor" class="text-brand-dark w-full h-full transform translate-x-12 -translate-y-12 blur-sm">
@@ -99,8 +132,8 @@
             </svg>
         </div>
 
-        <!-- Stats Top Right with Vertical Dividers -->
-        <div class="absolute top-24 md:top-28 right-8 md:right-16 hidden sm:flex items-center gap-5 md:gap-7 text-brand-dark z-20">
+        <!-- Desktop Stats Top Right with Vertical Dividers -->
+        <div class="absolute top-24 md:top-28 right-8 md:right-16 hidden md:flex items-center gap-5 md:gap-7 text-brand-dark z-20">
             <span class="font-heading text-3xl md:text-4xl tracking-wide font-bold">100+</span>
             <span class="h-6 w-[1.5px] bg-brand-dark/30"></span>
             <span class="font-heading text-3xl md:text-4xl tracking-wide font-bold">10+</span>
@@ -108,32 +141,63 @@
             <span class="font-heading text-3xl md:text-4xl tracking-wide font-bold">05+</span>
         </div>
 
-        <!-- Left Content -->
-        <div class="w-full md:w-5/12 lg:w-4/12 z-10 mt-12 md:mt-0 flex flex-col items-start">
-            <h1 class="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.88] text-brand-dark mb-8 text-shadow tracking-tight">
-                <span class="inline-flex items-center gap-2">
-                    RICH &
-                    <!-- Decorative Radiant Dashes -->
-                    <svg class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 -mt-3 text-[#8C5D39]" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="6" y1="18" x2="28" y2="6" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
-                        <line x1="12" y1="28" x2="38" y2="20" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
-                        <line x1="14" y1="40" x2="38" y2="38" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
-                    </svg>
-                </span>
-                <br>EROMATIC
-                <br>LOUNGE
-                <br>COFFEE
-            </h1>
-            <a href="#" class="inline-flex items-center gap-3 bg-brand-dark text-white px-7 py-3.5 rounded-full text-xs font-semibold tracking-wider hover:bg-brand-dark/90 transition shadow-xl group">
-                SHOP NOW
-                <div class="bg-white/20 p-1 rounded-full group-hover:translate-x-0.5 transition duration-300">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <!-- Hero Top Content (Headline & Mobile Stats Layout) -->
+        <div class="w-full md:w-5/12 lg:w-4/12 z-10 mt-4 sm:mt-6 md:mt-0 flex flex-col items-start">
+            <div class="w-full flex items-start justify-between gap-3">
+                <!-- Left: Headline & CTA -->
+                <div class="flex-1">
+                    <h1 class="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.88] text-brand-dark mb-6 sm:mb-8 text-shadow tracking-tight">
+                        <span class="inline-flex items-center gap-2">
+                            RICH &
+                            <!-- Decorative Radiant Dashes -->
+                            <svg class="w-7 h-7 sm:w-10 sm:h-10 md:w-12 md:h-12 -mt-2 sm:-mt-3 text-[#8C5D39]" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="6" y1="18" x2="28" y2="6" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+                                <line x1="12" y1="28" x2="38" y2="20" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+                                <line x1="14" y1="40" x2="38" y2="38" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <br>EROMATIC
+                        <br>LOUNGE
+                        <br>COFFEE
+                    </h1>
+                    <a href="#" class="inline-flex items-center gap-3 bg-brand-dark text-white px-7 py-3.5 rounded-full text-xs font-semibold tracking-wider hover:bg-brand-dark/90 transition shadow-xl group">
+                        SHOP NOW
+                        <div class="bg-white/20 p-1 rounded-full group-hover:translate-x-0.5 transition duration-300">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                        </div>
+                    </a>
                 </div>
-            </a>
+
+                <!-- Right Side Fill for Mobile (Stats Counter Card) -->
+                <div class="md:hidden flex flex-col items-end gap-2.5 pt-1 flex-shrink-0">
+                    <div class="bg-brand-cream/85 backdrop-blur-sm border border-brand-dark/15 rounded-2xl px-3.5 py-3 shadow-md flex flex-col items-center gap-2 text-brand-dark min-w-[80px]">
+                        <div class="text-center">
+                            <span class="font-heading text-2xl font-bold leading-none block">100+</span>
+                            <span class="text-[8px] uppercase tracking-wider text-brand-dark/70 font-semibold">Flavors</span>
+                        </div>
+                        <span class="w-full h-px bg-brand-dark/15"></span>
+                        <div class="text-center">
+                            <span class="font-heading text-2xl font-bold leading-none block">10+</span>
+                            <span class="text-[8px] uppercase tracking-wider text-brand-dark/70 font-semibold">Outlets</span>
+                        </div>
+                        <span class="w-full h-px bg-brand-dark/15"></span>
+                        <div class="text-center">
+                            <span class="font-heading text-2xl font-bold leading-none block">05+</span>
+                            <span class="text-[8px] uppercase tracking-wider text-brand-dark/70 font-semibold">Years</span>
+                        </div>
+                    </div>
+
+                    <!-- Organic Bean Seal Tag -->
+                    <div class="flex items-center gap-1.5 bg-brand-dark/5 border border-brand-dark/10 rounded-full px-2.5 py-1 text-[8px] font-semibold text-brand-dark/80 tracking-wider">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse"></span>
+                        <span>CRAFT ROAST</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Hero 3D Cups Composite Image on Stone Blocks -->
-        <div class="w-full md:w-7/12 lg:w-8/12 flex items-end justify-center md:justify-end mt-10 md:mt-0 relative z-10">
+        <div class="w-full md:w-7/12 lg:w-8/12 flex items-end justify-center md:justify-end mt-8 md:mt-0 relative z-10">
             <img src="image/hero image.png" alt="Rich & Eromatic Lounge Coffee 3D Cups Collection" class="w-full max-w-4xl h-auto object-contain drop-shadow-2xl hover:scale-[1.01] transition duration-700 pointer-events-none select-none">
         </div>
     </section>
@@ -369,5 +433,21 @@
         </div>
     </footer>
 
+    <!-- Mobile Navigation Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isExpanded = !mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                menuIconOpen.classList.toggle('hidden');
+                menuIconClose.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
 </html>
