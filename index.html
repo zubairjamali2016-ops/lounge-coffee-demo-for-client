@@ -133,13 +133,13 @@
             </svg>
         </div>
 
-        <!-- Stats Top Right with Vertical Dividers -->
-        <div class="absolute top-20 md:top-28 right-5 md:right-16 flex items-center gap-2 sm:gap-5 md:gap-7 text-brand-dark z-20" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-            <span class="font-heading text-xl sm:text-2xl md:text-4xl tracking-wide font-bold">100+</span>
-            <span class="h-4 md:h-6 w-[1.5px] bg-brand-dark/30"></span>
-            <span class="font-heading text-xl sm:text-2xl md:text-4xl tracking-wide font-bold">10+</span>
-            <span class="h-4 md:h-6 w-[1.5px] bg-brand-dark/30"></span>
-            <span class="font-heading text-xl sm:text-2xl md:text-4xl tracking-wide font-bold">05+</span>
+        <!-- Stats: Horizontal on desktop only -->
+        <div class="absolute top-24 md:top-28 right-8 md:right-16 hidden md:flex items-center gap-5 md:gap-7 text-brand-dark z-20" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <span class="font-heading text-3xl md:text-4xl tracking-wide font-bold">100+</span>
+            <span class="h-6 w-[1.5px] bg-brand-dark/30"></span>
+            <span class="font-heading text-3xl md:text-4xl tracking-wide font-bold">10+</span>
+            <span class="h-6 w-[1.5px] bg-brand-dark/30"></span>
+            <span class="font-heading text-3xl md:text-4xl tracking-wide font-bold">05+</span>
         </div>
 
         <!-- Hero Top Content (Headline) -->
@@ -167,6 +167,30 @@
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                         </div>
                     </a>
+                </div>
+
+                <!-- Mobile Vertical Stats Card (hidden on desktop) -->
+                <div class="md:hidden flex flex-col items-end gap-2.5 pt-1 flex-shrink-0" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="bg-brand-cream/85 backdrop-blur-sm border border-brand-dark/15 rounded-2xl px-3.5 py-3 shadow-md flex flex-col items-center gap-2 text-brand-dark min-w-[80px]">
+                        <div class="text-center">
+                            <span class="font-heading text-2xl font-bold leading-none block">100+</span>
+                            <span class="text-[8px] uppercase tracking-wider text-brand-dark/70 font-semibold">Flavors</span>
+                        </div>
+                        <span class="w-full h-px bg-brand-dark/15"></span>
+                        <div class="text-center">
+                            <span class="font-heading text-2xl font-bold leading-none block">10+</span>
+                            <span class="text-[8px] uppercase tracking-wider text-brand-dark/70 font-semibold">Outlets</span>
+                        </div>
+                        <span class="w-full h-px bg-brand-dark/15"></span>
+                        <div class="text-center">
+                            <span class="font-heading text-2xl font-bold leading-none block">05+</span>
+                            <span class="text-[8px] uppercase tracking-wider text-brand-dark/70 font-semibold">Years</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1.5 bg-brand-dark/5 border border-brand-dark/10 rounded-full px-2.5 py-1 text-[8px] font-semibold text-brand-dark/80 tracking-wider">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse"></span>
+                        <span>CRAFT ROAST</span>
+                    </div>
                 </div>
             </div>
         </div>
