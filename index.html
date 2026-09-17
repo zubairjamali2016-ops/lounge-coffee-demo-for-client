@@ -8,19 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    animation: {
-                        'fade-in': 'fadeIn 1.5s ease-out forwards',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0', transform: 'translateY(15px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
-                    },
                     colors: {
                         brand: {
                             dark: '#3B1E08',
@@ -62,10 +54,10 @@
         }
     </style>
 </head>
-<body class="font-sans antialiased opacity-0 animate-fade-in">
+<body class="font-sans antialiased">
 
     <!-- Header -->
-    <header class="w-full absolute top-0 z-50 py-4 md:py-6 px-5 sm:px-8 md:px-16 flex justify-between items-center">
+    <header data-aos="fade-down" data-aos-duration="1000" class="w-full absolute top-0 z-50 py-4 md:py-6 px-5 sm:px-8 md:px-16 flex justify-between items-center">
         <!-- Logo -->
         <div class="flex items-center gap-2">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#D99F45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -154,7 +146,7 @@
         <div class="w-full md:w-5/12 lg:w-4/12 z-10 mt-4 sm:mt-6 md:mt-0 flex flex-col items-start">
             <div class="w-full flex items-start justify-between gap-3">
                 <!-- Left: Headline & CTA -->
-                <div class="flex-1">
+                <div class="flex-1" data-aos="fade-right" data-aos-duration="1200">
                     <h1 class="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.88] text-brand-dark mb-6 sm:mb-8 text-shadow tracking-tight">
                         <span class="inline-flex items-center gap-2">
                             RICH &
@@ -206,13 +198,13 @@
         </div>
 
         <!-- Hero 3D Cups Composite Image on Stone Blocks -->
-        <div class="w-full md:w-7/12 lg:w-8/12 flex items-end justify-center md:justify-end mt-8 md:mt-0 relative z-10">
+        <div class="w-full md:w-7/12 lg:w-8/12 flex items-end justify-center md:justify-end mt-8 md:mt-0 relative z-10" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">
             <img src="image/hero image.png" alt="Rich & Eromatic Lounge Coffee 3D Cups Collection" class="w-full max-w-4xl h-auto object-contain drop-shadow-2xl hover:scale-[1.01] transition duration-700 pointer-events-none select-none">
         </div>
     </section>
 
     <!-- Brand Banner -->
-    <section class="py-24 px-8 md:px-16 text-center max-w-6xl mx-auto">
+    <section class="py-24 px-8 md:px-16 text-center max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
         <h2 class="font-heading text-5xl md:text-7xl lg:text-8xl text-brand-orange/80 text-brand-dark leading-[1.1]">
             MORE THAN COFFEE
             <span class="pill-img" style="background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=300&q=80');"></span>
@@ -225,11 +217,11 @@
     <!-- Trending Flavors -->
     <section class="bg-brand-dark py-24 px-8 md:px-16">
         <div class="max-w-7xl mx-auto">
-            <h2 class="font-heading text-white text-5xl md:text-6xl text-center mb-16">OUR TRENDING FLAVOR</h2>
+            <h2 data-aos="fade-up" class="font-heading text-white text-5xl md:text-6xl text-center mb-16">OUR TRENDING FLAVOR</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Card 1: Vanilla Latte -->
-                <div class="bg-brand-cream rounded-2xl p-6 shadow-xl flex flex-col group cursor-pointer hover:-translate-y-2 transition duration-300">
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-brand-cream rounded-2xl p-6 shadow-xl flex flex-col group cursor-pointer hover:-translate-y-2 transition duration-300">
                     <div class="bg-[#e6dccb] rounded-xl h-64 mb-6 flex items-center justify-center p-4">
                         <!-- Cup Graphic inside card -->
                         <img src="image/vanilla Lounge Coffee Cup Mockup.png" alt="Vanilla Latte Cup" class="h-44 w-auto object-contain transform group-hover:scale-110 transition duration-300 drop-shadow-xl">
@@ -245,7 +237,7 @@
                 </div>
 
                 <!-- Card 2: Chocolate Latte -->
-                <div class="bg-brand-cream rounded-2xl p-6 shadow-xl flex flex-col group cursor-pointer hover:-translate-y-2 transition duration-300">
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-brand-cream rounded-2xl p-6 shadow-xl flex flex-col group cursor-pointer hover:-translate-y-2 transition duration-300">
                     <div class="bg-[#e6dccb] rounded-xl h-64 mb-6 flex items-center justify-center p-4">
                         <img src="image/chocolate Lounge Coffee Cup Mockup.png" alt="Chocolate Latte Cup" class="h-44 w-auto object-contain transform group-hover:scale-110 transition duration-300 drop-shadow-xl">
                     </div>
@@ -260,7 +252,7 @@
                 </div>
 
                 <!-- Card 3: Black Coffee -->
-                <div class="bg-brand-cream rounded-2xl p-6 shadow-xl flex flex-col group cursor-pointer hover:-translate-y-2 transition duration-300">
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-brand-cream rounded-2xl p-6 shadow-xl flex flex-col group cursor-pointer hover:-translate-y-2 transition duration-300">
                     <div class="bg-[#e6dccb] rounded-xl h-64 mb-6 flex items-center justify-center p-4">
                         <img src="image/Black Lounge Coffee Cup Mockup.png" alt="Black Coffee Cup" class="h-44 w-auto object-contain transform group-hover:scale-110 transition duration-300 drop-shadow-xl">
                     </div>
@@ -275,7 +267,7 @@
                 </div>
 
                 <!-- Card 4: Cappuccino -->
-                <div class="bg-brand-cream rounded-2xl p-6 shadow-xl flex flex-col group cursor-pointer hover:-translate-y-2 transition duration-300">
+                <div data-aos="fade-up" data-aos-delay="400" class="bg-brand-cream rounded-2xl p-6 shadow-xl flex flex-col group cursor-pointer hover:-translate-y-2 transition duration-300">
                     <div class="bg-[#e6dccb] rounded-xl h-64 mb-6 flex items-center justify-center p-4">
                         <img src="image/Cappuccino Lounge Coffee Cup Mockup.png" alt="Cappuccino Cup" class="h-44 w-auto object-contain transform group-hover:scale-110 transition duration-300 drop-shadow-xl">
                     </div>
@@ -295,7 +287,7 @@
 
     <!-- Our Story -->
     <section class="py-24 px-8 md:px-16 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+        <div data-aos="fade-right" data-aos-duration="1200" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
             <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl text-brand-dark leading-[1.1]">
                 OUR STORY, BREWED TO PERFECTION <br>
                 THE ART OF COFFEE, THE HEART OF LOUNGE <br>
@@ -318,7 +310,7 @@
     </section>
 
     <!-- Feedback Section -->
-    <section class="py-24 px-8 text-center max-w-3xl mx-auto">
+    <section data-aos="fade-up" data-aos-duration="1200" class="py-24 px-8 text-center max-w-3xl mx-auto">
         <h2 class="font-heading text-4xl md:text-5xl text-brand-dark mb-4">LOUNGE FEEDBACK FORM</h2>
         <p class="text-brand-dark/70 mb-10 text-sm md:text-base leading-relaxed">
             Welcome to the Coffee Cup Lounge — your thoughts brew our inspiration. From the rich aroma of your daily roast to the cozy atmosphere of our lounge, we cherish every detail of your experience. Share your thoughts, impressions, or suggestions below and help us craft unforgettable coffee moments.
@@ -365,7 +357,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-dark text-brand-beige py-16 px-8 md:px-16 rounded-t-[3rem]">
+    <footer data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0" class="bg-brand-dark text-brand-beige py-16 px-8 md:px-16 rounded-t-[3rem]">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
             <!-- Logo Column -->
             <div class="lg:col-span-1 flex flex-col items-start">
@@ -457,6 +449,10 @@
                 menuIconClose.classList.toggle('hidden');
             });
         }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50, duration: 800 });
     </script>
 </body>
 </html>
